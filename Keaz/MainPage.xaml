@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Keaz.MainPage"             
+             xmlns:local1="clr-namespace:Keaz.Utils">
+
+
+    <StackLayout VerticalOptions="CenterAndExpand">
+        <ScrollView>
+            <StackLayout>
+
+                <Entry Placeholder="E-mail" x:Name="email">
+                    <Entry.Triggers>
+                        <EventTrigger Event="TextChanged">
+                            <local1:EmailValidationTriggerAction />
+                        </EventTrigger>
+                    </Entry.Triggers>
+                </Entry>
+                <Entry Placeholder="Telephone" x:Name="telephone">
+                    <Entry.Triggers>
+                        <EventTrigger Event="TextChanged">
+                            <local1:NumericValidationTriggerAction />
+                        </EventTrigger>
+                    </Entry.Triggers>
+                </Entry>
+
+                <Button WidthRequest="200" BackgroundColor="Black" TextColor="WhiteSmoke" FontSize="15"
+                    Text="S'identifier" CornerRadius="10" FontAttributes="Bold" IsEnabled="False">
+                    <Button.Triggers>
+                        <MultiTrigger TargetType="Button">
+                            <MultiTrigger.Conditions>
+                                <BindingCondition Binding="{Binding Source={x:Reference email},
+                                   Path=TextColor}" Value="Default" />
+                                <BindingCondition Binding="{Binding Source={x:Reference telephone},
+                                   Path=TextColor}" Value="Default" />
+                            </MultiTrigger.Conditions>
+                            <Setter Property="IsEnabled" Value="True" />
+
+                            <!--<MultiTrigger.Conditions>
+                                <BindingCondition Binding="{Binding Source={x:Reference email},
+                                   Path=TextColor, Converter={StaticResource dataHasBeenEntered}}" Value="true" />
+                                <BindingCondition Binding="{Binding Source={x:Reference telephone},
+                                   Path=TextColor , Converter={StaticResource dataHasBeenEntered}}" Value="true" />
+                            </MultiTrigger.Conditions>-->
+                        </MultiTrigger>
+                    </Button.Triggers>
+                </Button>
+            </StackLayout>
+        </ScrollView>
+
+        <Grid >
+            <Grid.Style>
+                <Style TargetType="Grid">
+                    <Setter Property="VisualStateManager.VisualStateGroups">
+                        <VisualStateGroupList>
+                            <VisualStateGroup>
+                                <VisualState x:Name="Checked">
+                                    <VisualState.StateTriggers>
+                                        <CompareStateTrigger Property="{Binding Source={x:Reference checkBox}, Path=IsChecked}"
+                                             Value="True" />
+                                    </VisualState.StateTriggers>
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor"
+                                Value="Black" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Unchecked">
+                                    <VisualState.StateTriggers>
+                                        <CompareStateTrigger Property="{Binding Source={x:Reference checkBox}, Path=IsChecked}"
+                                             Value="False" />
+                                    </VisualState.StateTriggers>
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor"
+                                Value="White" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </Setter>
+                </Style>
+
+            </Grid.Style>
+            <Frame BackgroundColor="White"
+           CornerRadius="12"
+           Margin="24"
+           HorizontalOptions="Center"
+           VerticalOptions="Center">
+                <StackLayout Orientation="Horizontal">
+                    <CheckBox x:Name="checkBox"
+                      VerticalOptions="Center" />
+                    <Label Text="Check the CheckBox to modify the Grid background color."
+                   VerticalOptions="Center" />
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </StackLayout>
+</ContentPage>

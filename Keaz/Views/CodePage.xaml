@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Keaz.Views.CodePage" BackgroundColor="#0A6334"
+    Title="Code de vérification">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="EndAndExpand">
+                <ScrollView VerticalOptions="EndAndExpand">
+                    <StackLayout >
+                        <Label Text="Un code de vérification de 4 chiffres a été envoyé par SMS au numéro lié à votre compte bancaire. Entrez le code reçu pour accéder à votre compte"
+                       Margin="30,30"
+                   TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                   VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="15">
+                        </Label>
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand"
+                         VerticalOptions="CenterAndExpand" Spacing="15">
+                            <Entry Style="{StaticResource EntryStyle}"/>
+                            <Entry Style="{StaticResource EntryStyle}"/>
+                            <Entry Style="{StaticResource EntryStyle}"/>
+                            <Entry Style="{StaticResource EntryStyle}"/>
+
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand"
+                         VerticalOptions="CenterAndExpand" Spacing="15" Padding="20,20,20,30">
+                            <Label  Text="Je n'ai pas reçu de code" 
+                                    TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+                                    FontSize="13">
+                            </Label>
+
+                            <Label  Text="Renvoyez le code"
+                                    TextColor="White"
+                                    VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+                                    FontSize="15" FontAttributes="Bold" TextDecorations="Underline">
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
+                <Frame VerticalOptions="EndAndExpand" BackgroundColor="White" HeightRequest="300">
+                    <Grid RowSpacing="1" ColumnSpacing="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Text = "1" Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelStyle}"/>
+                        <Button Text = "2" Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelStyle}"/>
+                        <Button Text = "3" Grid.Row="0" Grid.Column="2" Style="{StaticResource LabelStyle}"/>
+                        <Button Text = "4" Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelStyle}"/>
+                        <Button Text = "5" Grid.Row="1" Grid.Column="1" Style="{StaticResource LabelStyle}"/>
+                        <Button Text = "6" Grid.Row="1" Grid.Column="2" Style="{StaticResource LabelStyle}"/>
+                        <Button Text = "7" Grid.Row="2" Grid.Column="0" Style="{StaticResource LabelStyle}"/>
+                        <Button Text = "8" Grid.Row="2" Grid.Column="1" Style="{StaticResource LabelStyle}"/>
+                        <Button Text = "9" Grid.Row="2" Grid.Column="2" Style="{StaticResource LabelStyle}"/>
+                        <Button Text = "" Grid.Row="3" Grid.Column="0"  IsEnabled="False"  Style="{StaticResource LabelStyle}"/>
+                        <Button Text = "0" Grid.Row="3" Grid.Column="1" Style="{StaticResource LabelStyle}"/>
+                        <Button Text = "⇤" Grid.Row="3" Grid.Column="2" Style="{StaticResource LabelStyle}"/>
+                    </Grid>
+                </Frame>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
