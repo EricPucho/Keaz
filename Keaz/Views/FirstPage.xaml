@@ -3,36 +3,54 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Keaz.Views.FirstPage"
-    BackgroundImageSource="back">
-    <ContentPage.Content>
-        <StackLayout>
-            <ScrollView>
-                <StackLayout Spacing="30">
-                    <Image Source="keaz_logo" HeightRequest="150" WidthRequest="200" Margin="20,80,20,15"></Image>
-                    <Label Text="Bienvenue sur KEAZ d'Orabank" TextColor="#FFFFFF"
+    NavigationPage.HasNavigationBar="false"
+    NavigationPage.BackButtonTitle="">
+
+    <RelativeLayout>
+        <Image
+                Aspect="AspectFill"
+                Source="back.png"
+                BackgroundColor="Black"
+                RelativeLayout.WidthConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                RelativeLayout.HeightConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Height}">
+        </Image>
+
+        <ScrollView RelativeLayout.WidthConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                RelativeLayout.HeightConstraint= "{ConstraintExpression Type=RelativeToParent}">
+
+            <StackLayout Spacing="30">
+                <Image Source="keaz_logo" HeightRequest="150" WidthRequest="200" Margin="20,80,20,15"/>
+
+                <Label Text="Bienvenue sur KEAZ d'Orabank" TextColor="#FFFFFF"
                            FontSize="20"
                            FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                            VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-                    </Label>
+                </Label>
 
-                    <Label Text="Cliquez, Maitriser, profitez ..." TextColor="#FFFFFF"
+                <Label Text="Cliquez, Maitriser, profitez ..." TextColor="#FFFFFF"
                            FontSize="16"
                            FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                            VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-                    </Label>
-                </StackLayout>
-            </ScrollView>
-            <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand"
-                     HorizontalOptions="FillAndExpand" Padding="20,20,20,60">
-                <Button WidthRequest="200" BackgroundColor="#90E86C" TextColor="WhiteSmoke" FontSize="15"
-                    Text="S'identifier" CornerRadius="10" FontAttributes="Bold" Clicked="Button_Clicked">
-                </Button>
-
-                <Button WidthRequest="200" BackgroundColor="#90E86C" TextColor="White"
-                    Text="Première connexion ? S'enroler" CornerRadius="10" FontAttributes="Bold" FontSize="15">
-                </Button>
-
+                </Label>
             </StackLayout>
+        </ScrollView>
+
+        <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand"
+                     HorizontalOptions="FillAndExpand" Padding="20,20,20,60" Spacing="20"
+
+                      RelativeLayout.WidthConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                RelativeLayout.HeightConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Height}">
+
+            <Button WidthRequest="200" BackgroundColor="#90E86C" TextColor="WhiteSmoke" 
+                    Text="S'identifier"  Clicked="Button_Clicked"/>
+
+
+            <Button WidthRequest="200" BackgroundColor="#90E86C" TextColor="White"
+                    Text="Première connexion ? S'enroler"  Clicked="Button_Clicked_1"/>
+
+
         </StackLayout>
-    </ContentPage.Content>
+
+    </RelativeLayout>
+
 </ContentPage>

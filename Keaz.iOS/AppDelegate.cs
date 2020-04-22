@@ -22,12 +22,15 @@ namespace Keaz.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            Xamarin.Forms.Forms.SetFlags("StateTriggers_Experimental");
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
-            UINavigationBar.Appearance.BarTintColor = UIColor.FromRGB(17, 98, 54);
-            UINavigationBar.Appearance.TintColor = UIColor.FromRGB(17, 98, 54);
-            UITabBar.Appearance.SelectedImageTintColor = UIColor.FromRGB(17, 98, 54);
+            UINavigationBar.Appearance.SetTitleTextAttributes(new UITextAttributes()
+            {
+                Font = UIFont.FromName("ProximaNova-Regular", 20),
+                TextColor = UIColor.FromRGB(10, 99, 52),
+
+
+            });
             return base.FinishedLaunching(app, options);
         }
     }

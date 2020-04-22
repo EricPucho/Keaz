@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Keaz.Views.RecapVirementPage" Title="Récapitulatif du virement">
+    <StackLayout Spacing="20" Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+        <Label Text="Souhaitez-vous vraiment virer" FontSize="20" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+        <Label Text="56 000 FCFA" FontSize="30" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="#8dea65"/>
+        <Label Text="du compte" FontSize="20" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+
+        <Frame HasShadow="False" BackgroundColor="#C5E3DC" CornerRadius="10" WidthRequest="350">
+            <StackLayout>
+                <Label Text="Compte courant résident" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                <Label Text="TG116 87556 172639826717 087"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                <Label Text="50 766,00 XOF" FontSize="20" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+        </Frame>
+        <Label Text="vers le compte" FontSize="20" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+
+        <Frame HasShadow="False" BackgroundColor="#EAFBE4" CornerRadius="10" WidthRequest="350">
+            <StackLayout>
+                <Label Text="KOAMI DOE" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                <Label Text="TG116 87556 172639826717 087" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+        </Frame>
+        <Label Text="le 15/03/2020 ?" FontSize="20" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+
+        <Button BackgroundColor="#90E86C" TextColor="WhiteSmoke" 
+                Text="Je confirme"
+                HeightRequest="50" 
+                HorizontalOptions="FillAndExpand" Margin="0,40,0,0" Clicked="Button_Clicked"/>
+
+        <Button BackgroundColor="White" TextColor="#0A6334" BorderColor="#0A6334" BorderWidth="1"
+                Text="Annuler l'opération"
+                HeightRequest="50" 
+                HorizontalOptions="FillAndExpand" Clicked="Button_Clicked"/>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:utils="clr-namespace:Keaz.Utils"
+             x:Class="Keaz.Views.ConnexionPage"
+             Title="Se connecter à son compte">
+
+    <StackLayout Padding="30,30" >
+        <Label Text="Entrer votre identifiant et mot de passe pour accéder à votre compte MyKeaz"
+               FontFamily="ProximaNova-Regular"
+               FontSize="18" FontAttributes="None"
+               TextColor="#FF000000"
+               HorizontalTextAlignment="Start" />
+
+
+        <StackLayout Orientation="Vertical" Spacing="25" VerticalOptions="EndAndExpand">
+            <StackLayout>
+                <Label Text="Identifiant" TextColor="#0A6334">
+                    <Label.Triggers>
+                        <DataTrigger TargetType="Label"
+                                     Binding="{Binding Source={x:Reference entry_identifiant}, Path=Text}" Value="">
+                            <Setter Property="IsVisible" Value="False" />
+                        </DataTrigger>
+                    </Label.Triggers>
+                </Label>
+                <Frame
+                    HasShadow="False"
+                    CornerRadius="15" 
+                    BorderColor="#0A6334"
+                    IsClippedToBounds="True">
+                    <utils:CustomEntry Text = ""
+                            Placeholder="Identifiant"
+                            x:Name="entry_identifiant"
+                            BackgroundColor="Transparent"
+                            VerticalOptions="CenterAndExpand"
+                            MaxLength="25"/>
+
+                </Frame>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Mot de passe" TextColor="#0A6334">
+                    <Label.Triggers>
+                        <DataTrigger TargetType="Label"
+                     Binding="{Binding Source={x:Reference entry_password},
+                                       Path=Text}"
+                     Value="">
+                            <Setter Property="IsVisible" Value="False" />
+                        </DataTrigger>
+                    </Label.Triggers>
+                </Label>
+                <Frame HasShadow="False" CornerRadius="15" 
+                   BorderColor="#0A6334" IsClippedToBounds="True">
+                    <utils:CustomEntry Text = ""
+                            Placeholder="Mot de passe" 
+                            x:Name="entry_password"
+                            BackgroundColor="Transparent"
+                            VerticalOptions="CenterAndExpand"
+                            MaxLength="25" IsPassword="True"/>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout VerticalOptions="EndAndExpand" Spacing="20" Padding="0,0,0,20">
+            <Button BackgroundColor="#90E86C" TextColor="WhiteSmoke" 
+                Text="Se connecter"
+                HeightRequest="50" 
+                HorizontalOptions="FillAndExpand" Clicked="Button_Clicked"/>
+            <Label  Text="Mot de passe oublié ?"
+                                    TextColor="Black"
+                                    VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+                                    FontSize="15" FontAttributes="Bold" TextDecorations="Underline">
+            </Label>
+        </StackLayout>
+
+
+
+    </StackLayout>
+</ContentPage>

@@ -1,18 +1,28 @@
 ﻿using System;
 using Keaz.Views;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using Xamarin.Forms.Xaml;
 
 namespace Keaz
 {
-    public partial class App : Application
+    public partial class App : Xamarin.Forms.Application
     {
         public App()
         {
-            Device.SetFlags(new string[] { "StateTriggers_Experimental" });
             InitializeComponent();
 
-            MainPage = new MainPage();
+            var navigationPage = new Xamarin.Forms.NavigationPage(new FirstPage());
+            navigationPage.On<Xamarin.Forms.PlatformConfiguration.iOS>().SetStatusBarTextColorMode(StatusBarTextColorMode.MatchNavigationBarTextLuminosity);
+
+            navigationPage.BarBackgroundColor = Color.White;
+            navigationPage.BackgroundColor = Color.FromRgb(10, 99, 52);
+            navigationPage.BarTextColor = Color.FromRgb(10, 99, 52);
+
+            //navigationPage.BarBackgroundColor = Color.FromRgb(10, 99, 52);
+            //navigationPage.BackgroundColor = Color.White;
+            //navigationPage.BarTextColor = Color.White;
+            App.Current.MainPage = navigationPage;
         }
 
         protected override void OnStart()

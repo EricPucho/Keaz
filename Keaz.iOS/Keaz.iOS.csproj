@@ -68,6 +68,7 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renderers\CustomEntryRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -113,6 +114,31 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\.DS_Store" />
+    <ImageAsset Include="Resources\Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\icon.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\icon-76%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\icon-40%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\icon-40%403x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\icon-83.5%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\icon-small.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\icon-60%403x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\icon-76.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\notification-icon~ipad%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\notification-icon%403x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\notification-icon%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\icon-small-50%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\icon-72.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\icon-72%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\icon-60%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\notification-icon~ipad.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\icon%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\icon-40.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\icon-small%403x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\icon-small-50.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\ios-marketing.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\icon-small%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -123,18 +149,45 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.5.0.530" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.2" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.617" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\Keaz\Keaz.csproj">
-      <Project>{270AE53B-2354-4A96-9089-FC3F5701C9B5}</Project>
+      <Project>{CC2BD704-F0BF-48EA-85A8-B3CF60A0336D}</Project>
       <Name>Keaz</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\keaz_logo.png" />
     <BundleResource Include="Resources\back.png" />
+    <BundleResource Include="Resources\Fonts\ProximaNova-Regular.otf" />
+    <BundleResource Include="Resources\cartes.png" />
+    <BundleResource Include="Resources\settings.png" />
+    <BundleResource Include="Resources\operations.png" />
+    <BundleResource Include="Resources\comptes.png" />
+    <BundleResource Include="Resources\user.png" />
+    <BundleResource Include="Resources\credit_card.png" />
+    <BundleResource Include="Resources\details.png" />
+    <BundleResource Include="Resources\mail.png" />
+    <BundleResource Include="Resources\lock.png" />
+    <BundleResource Include="Resources\hand.png" />
+    <BundleResource Include="Resources\edit.png" />
+    <BundleResource Include="Resources\factures.png" />
+    <BundleResource Include="Resources\add_user.png" />
+    <BundleResource Include="Resources\keaz_down.png" />
+    <BundleResource Include="Resources\virement.png" />
+    <BundleResource Include="Resources\keaz_up.png" />
+    <BundleResource Include="Resources\right.png" />
+    <BundleResource Include="Resources\down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Fonts\" />
+    <Folder Include="Renderers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+    <ITunesArtwork Include="iTunesArtwork" />
   </ItemGroup>
 </Project>

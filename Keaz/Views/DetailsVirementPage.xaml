@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:converter="clr-namespace:Keaz.Utils"
+             x:Class="Keaz.Views.DetailsVirementPage" BackgroundColor="#0A6334">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converter:MontantBackground x:Key="MontantBackgroundConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout >
+        <StackLayout Orientation="Vertical" Margin="0,20,0,0">
+            <Label Text="Compte courant résident" TextColor="White"
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <Label Text="TG116 35732 147118715686 09" TextColor="White" FontSize="20"
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="0,0,0,30"/>
+
+            <Label Text="Solde" TextColor="White"
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <Label Text="50 766,00 XOF" TextColor="White" FontSize="25"
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+
+        </StackLayout>
+
+        <StackLayout VerticalOptions="FillAndExpand">
+            <Frame VerticalOptions="FillAndExpand" CornerRadius="20">
+                <StackLayout BackgroundColor="White" Margin="0,5,0,0" >
+                    <Label Text="Historique des transactions" FontSize="20" Margin="0,0,0,20"/>
+
+                    <CollectionView ItemsSource="{Binding Operations_}"
+                            ItemsLayout="VerticalList" IsGrouped="true">
+                        <CollectionView.GroupHeaderTemplate>
+                            <DataTemplate>
+                                <Label Text="{Binding date}"
+                                    FontAttributes="Bold" Padding="0,20,0,10"/>
+                            </DataTemplate>
+                        </CollectionView.GroupHeaderTemplate>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout Spacing="3">
+                                    <Grid Margin="0,10,10,10" HeightRequest="60">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="20" />
+                                            <RowDefinition Height="20" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="45" />
+                                            <ColumnDefinition Width="180" />
+                                        </Grid.ColumnDefinitions>
+                                        <Frame HasShadow="False"
+                                       Grid.RowSpan="2" Grid.Column="0"
+                                       CornerRadius="20"
+                                       Padding="0"
+                                       BackgroundColor="#8dea65">
+                                            <Label Text="{Binding magic}" TextColor="White" FontSize="23"
+                                           VerticalOptions="CenterAndExpand"
+                                           HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                        </Frame>
+                                        <Label Text="{Binding type_operation}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                                   Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" />
+                                        <Label Text="{Binding heure}" TextColor="Gray" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                                   Grid.Row="1" Grid.Column="1"/>
+                                        <Frame Grid.RowSpan="2" Grid.Column="2" HasShadow="False"
+                                               BackgroundColor="{Binding montant, Converter={StaticResource MontantBackgroundConverter}}"
+                                              CornerRadius="15" Padding="0">
+                                            <Label Text="{Binding montant}" TextColor="Black"
+                                                   VerticalTextAlignment="Center"
+                                                   HorizontalTextAlignment="End" HorizontalOptions="FillAndExpand"/>
+                                        </Frame>
+                                    </Grid>
+                                </StackLayout>
+
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

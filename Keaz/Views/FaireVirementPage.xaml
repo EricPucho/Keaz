@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Keaz.Views.FaireVirementPage"
+             Title="Faire un virement">
+    <StackLayout Padding="10,30,10,0">
+        <Label Text="Selectionner le compte à débiter"/>
+
+        <Frame HasShadow="False" BackgroundColor="#C5E3DC" CornerRadius="10" WidthRequest="350"  Margin="5,0,0,30">
+            <StackLayout>
+                <Label Text="Compte courant résident" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="TG116 87556 172639826717 087" 
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Start" HorizontalOptions="Start"/>
+                    <Image Source="down" HeightRequest="20" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+
+                </StackLayout>
+
+                <Label Text="50 766,00 XOF" FontSize="19" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+            </StackLayout>
+        </Frame>
+
+        <Label Text="Selectionner le destinataire" />
+
+        <Frame HasShadow="False" BackgroundColor="#EAFBE4" CornerRadius="10" WidthRequest="350" Margin="10">
+            <StackLayout>
+                <Label Text="KOAMI DOE"  VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                <Label Text="TG116 87556 172639826717 087" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+            </StackLayout>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+            </Frame.GestureRecognizers>
+        </Frame>
+        <Frame HasShadow="False" BackgroundColor="#EAFBE4" CornerRadius="10" WidthRequest="350" Margin="10">
+            <StackLayout>
+                <Label Text="AUDREY LAW"  VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                <Label Text="TG116 87556 172639826778 016"  VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+            </StackLayout>
+        </Frame>
+
+        <Button BackgroundColor="White" TextColor="#0A6334" BorderColor="#0A6334" BorderWidth="1"
+                Text="Ajouter un bénéficiaire"
+                HeightRequest="60" 
+                HorizontalOptions="FillAndExpand" />
+    </StackLayout>
+</ContentPage>

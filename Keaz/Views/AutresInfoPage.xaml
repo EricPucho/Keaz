@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:utils="clr-namespace:Keaz.Utils"
+             x:Class="Keaz.Views.AutresInfoPage"
+             Title="Autres informations">
+
+    <StackLayout Padding="10">
+        <StackLayout Margin="0,40,0,30">
+            <Label Text="Motif du virement" TextColor="#0A6334">
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label"
+                                     Binding="{Binding Source={x:Reference entry_motif}, Path=Text}" Value="">
+                        <Setter Property="IsVisible" Value="False" />
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
+            <Frame
+                    HasShadow="False"
+                    CornerRadius="15" 
+                    BorderColor="#0A6334"
+                    IsClippedToBounds="True">
+                <utils:CustomEntry Text = ""
+                            Placeholder="Motif du virement"
+                            x:Name="entry_motif"
+                            BackgroundColor="Transparent"
+                            VerticalOptions="CenterAndExpand"
+                            MaxLength="25"/>
+
+            </Frame>
+        </StackLayout>
+        <Label Text="Type de virement"/>
+        <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+            <Button BackgroundColor="#90E86C"
+                     TextColor="WhiteSmoke" 
+                Text="Ponctuel"
+                HeightRequest="50" 
+                HorizontalOptions="FillAndExpand" />
+            <Button BackgroundColor="LightGray"
+                     TextColor="WhiteSmoke" 
+                Text="Différé"
+                HeightRequest="50" 
+                HorizontalOptions="FillAndExpand" />
+            <Button BackgroundColor="LightGray"
+                     TextColor="WhiteSmoke" 
+                Text="Permanent"
+                HeightRequest="50" 
+                HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+
+        <StackLayout Margin="0,40,0,30">
+            <Label Text="Date de l'opération" TextColor="#0A6334">
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label"
+                                     Binding="{Binding Source={x:Reference entry_date}, Path=Text}" Value="">
+                        <Setter Property="IsVisible" Value="False" />
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
+            <Frame
+                    HasShadow="False"
+                    CornerRadius="15" 
+                    BorderColor="#0A6334"
+                    IsClippedToBounds="True">
+                <utils:CustomEntry Text = ""
+                            Placeholder="Date de l'opération"
+                            x:Name="entry_date"
+                            BackgroundColor="Transparent"
+                            VerticalOptions="CenterAndExpand"
+                            MaxLength="25"/>
+
+            </Frame>
+        </StackLayout>
+        <Button BackgroundColor="#90E86C"
+                     TextColor="WhiteSmoke" 
+                Text="Valider" Margin="0,0,0,30"
+                HeightRequest="50" 
+                HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Clicked="Button_Clicked"/>
+    </StackLayout>
+</ContentPage>

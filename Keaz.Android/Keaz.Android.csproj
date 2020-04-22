@@ -97,7 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Keaz\Keaz.csproj">
-      <Project>{270AE53B-2354-4A96-9089-FC3F5701C9B5}</Project>
+      <Project>{CC2BD704-F0BF-48EA-85A8-B3CF60A0336D}</Project>
       <Name>Keaz</Name>
     </ProjectReference>
   </ItemGroup>

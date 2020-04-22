@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:utils="clr-namespace:Keaz.Utils"
+             x:Class="Keaz.Views.MontantPage" Title="Entrer le montant">
+
+
+    <StackLayout Padding="10" VerticalOptions="FillAndExpand">
+        <StackLayout Margin="0,40,0,30" VerticalOptions="FillAndExpand">
+
+            <utils:CustomEntry Text = ""
+                            Placeholder="5600 FCFA"
+                            x:Name="entry_motif" FontSize="40"
+                            BackgroundColor="Transparent"
+                            VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+                            />
+
+
+        </StackLayout>
+
+        <Button BackgroundColor="#90E86C"
+                     TextColor="WhiteSmoke" 
+                Text="Suivant" Margin="0,0,0,30"
+                HeightRequest="50" 
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="EndAndExpand" Clicked="Button_Clicked"/>
+    </StackLayout>
+</ContentPage>

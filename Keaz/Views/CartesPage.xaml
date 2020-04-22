@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Keaz.Views.CartesPage" IconImageSource="cartes"
+             Title="Cartes et Services">
+    <ContentPage.Content>
+        <StackLayout Padding="30">
+
+            <Image Source="credit_card"/>
+
+            <Label Text="Services de la carte" FontSize="20" Padding="0,30,0,0"/>
+            <BoxView HeightRequest="1" Color="LightGray"/>
+            <StackLayout Spacing="15">
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="lock" HeightRequest="35"/>
+                    <Label Text="Vérrouiller sa carte bancaire"
+                           Style="{StaticResource LabelStyle2}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="hand" HeightRequest="35"/>
+                    <Label Text="Faire opposition en cas de vol ou perte"
+                           Style="{StaticResource LabelStyle2}"/>
+                </StackLayout>
+            </StackLayout>
+
+            <Label Text="Autres services" FontSize="20" Margin="0,20,10,0"/>
+            <BoxView HeightRequest="1" Color="LightGray"/>
+            <StackLayout Spacing="15">
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="edit" HeightRequest="35"/>
+                    <Label Text="Commander un chequier" Style="{StaticResource LabelStyle2}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="hand" HeightRequest="35"/>
+                    <Label Text="Faire opposition sur chèque" Style="{StaticResource LabelStyle2}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="details" HeightRequest="35"/>
+                    <Label Text="Détails des encours de crédit" Style="{StaticResource LabelStyle2}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="mail" HeightRequest="35"/>
+                    <Label Text="Contacter mon gestionnaire de compte" Style="{StaticResource LabelStyle2}"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>
