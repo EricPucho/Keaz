@@ -13,9 +13,7 @@
                            VerticalTextAlignment="Center"
                            HorizontalTextAlignment="Start" HorizontalOptions="Start"/>
                     <Image Source="down" HeightRequest="20" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
-
                 </StackLayout>
-
                 <Label Text="50 766,00 XOF" FontSize="19" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
             </StackLayout>
         </Frame>
@@ -31,6 +29,7 @@
                 <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
             </Frame.GestureRecognizers>
         </Frame>
+
         <Frame HasShadow="False" BackgroundColor="#EAFBE4" CornerRadius="10" WidthRequest="350" Margin="10">
             <StackLayout>
                 <Label Text="AUDREY LAW"  VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
@@ -38,7 +37,9 @@
             </StackLayout>
         </Frame>
 
-        <Button BackgroundColor="White" TextColor="#0A6334" BorderColor="#0A6334" BorderWidth="1"
+        <Button BackgroundColor="White"
+                TextColor="#0A6334"
+                BorderColor="#0A6334" BorderWidth="1"
                 Text="Ajouter un bénéficiaire"
                 HeightRequest="60" 
                 HorizontalOptions="FillAndExpand" />

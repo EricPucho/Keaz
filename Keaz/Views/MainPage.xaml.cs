@@ -13,6 +13,7 @@ namespace Keaz.Views
             this.SelectedTabColor = Color.FromHex("#8dea65");
             this.BackgroundColor = Color.White;
         }
+
         protected override void OnCurrentPageChanged()
         {
             base.OnCurrentPageChanged();

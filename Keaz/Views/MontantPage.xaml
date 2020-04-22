@@ -9,20 +9,20 @@
         <StackLayout Margin="0,40,0,30" VerticalOptions="FillAndExpand">
 
             <utils:CustomEntry Text = ""
-                            Placeholder="5600 FCFA"
-                            x:Name="entry_motif" FontSize="40"
-                            BackgroundColor="Transparent"
-                            VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
-                            />
-
-
+                               Placeholder="5600 FCFA"
+                               x:Name="entry_motif"
+                               FontSize="40"
+                               BackgroundColor="Transparent"
+                               VerticalOptions="CenterAndExpand"
+                               HorizontalOptions="CenterAndExpand"/>
         </StackLayout>
 
         <Button BackgroundColor="#90E86C"
-                     TextColor="WhiteSmoke" 
-                Text="Suivant" Margin="0,0,0,30"
+                Text="Suivant"
+                Margin="0,0,0,30"
                 HeightRequest="50" 
                 HorizontalOptions="FillAndExpand"
-                VerticalOptions="EndAndExpand" Clicked="Button_Clicked"/>
+                VerticalOptions="EndAndExpand"
+                Clicked="Button_Clicked"/>
     </StackLayout>
 </ContentPage>

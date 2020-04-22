@@ -21,36 +21,32 @@
             <StackLayout Spacing="30">
                 <Image Source="keaz_logo" HeightRequest="150" WidthRequest="200" Margin="20,80,20,15"/>
 
-                <Label Text="Bienvenue sur KEAZ d'Orabank" TextColor="#FFFFFF"
-                           FontSize="20"
-                           FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                           VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-                </Label>
+                <Label Text="Bienvenue sur KEAZ d'Orabank"
+                       TextColor="#FFFFFF"
+                       FontSize="20"
+                       FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                       VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
 
-                <Label Text="Cliquez, Maitriser, profitez ..." TextColor="#FFFFFF"
-                           FontSize="16"
-                           FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                           VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Label Text="Cliquez, Maitriser, profitez ..."
+                       TextColor="#FFFFFF"
+                       FontSize="16"
+                       FontAttributes="Bold"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                       VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                 </Label>
             </StackLayout>
         </ScrollView>
 
         <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand"
                      HorizontalOptions="FillAndExpand" Padding="20,20,20,60" Spacing="20"
-
-                      RelativeLayout.WidthConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Width}"
-                RelativeLayout.HeightConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Height}">
+                     RelativeLayout.WidthConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                     RelativeLayout.HeightConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Height}">
 
             <Button WidthRequest="200" BackgroundColor="#90E86C" TextColor="WhiteSmoke" 
                     Text="S'identifier"  Clicked="Button_Clicked"/>
 
-
             <Button WidthRequest="200" BackgroundColor="#90E86C" TextColor="White"
                     Text="Première connexion ? S'enroler"  Clicked="Button_Clicked_1"/>
-
-
         </StackLayout>
-
     </RelativeLayout>
-
 </ContentPage>

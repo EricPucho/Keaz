@@ -24,13 +24,13 @@ namespace Keaz.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
+
             UINavigationBar.Appearance.SetTitleTextAttributes(new UITextAttributes()
             {
                 Font = UIFont.FromName("ProximaNova-Regular", 20),
-                TextColor = UIColor.FromRGB(10, 99, 52),
-
-
+                TextColor = UIColor.FromRGB(10, 99, 52)
             });
+
             return base.FinishedLaunching(app, options);
         }
     }

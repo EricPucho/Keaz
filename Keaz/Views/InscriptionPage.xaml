@@ -3,11 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:utils="clr-namespace:Keaz.Utils"
              x:Class="Keaz.Views.InscriptionPage"
-             Title="Inscrivez-vous à Keaz" NavigationPage.BackButtonTitle="">
+             Title="Inscrivez-vous à Keaz"
+             NavigationPage.BackButtonTitle=""
+             BackgroundColor="White">
 
     <StackLayout Padding="30,30" >
         <Label Text="Renseignez les differentes informations de votre compte Orabank pour acceder à votre banque en ligne"
-               FontSize="18" FontAttributes="None"
+               FontSize="18"
+               FontAttributes="None"
                TextColor="#FF000000"
                HorizontalTextAlignment="Start" />
 
@@ -16,86 +19,72 @@
             <StackLayout>
                 <Label Text="Votre numéro de compte sans la clé RIB" TextColor="#0A6334">
                     <Label.Triggers>
-                        <DataTrigger TargetType="Label"
-                                     Binding="{Binding Source={x:Reference entry_compte}, Path=Text}" Value="">
+                        <DataTrigger TargetType="Label" Binding="{Binding Source={x:Reference entry_compte}, Path=Text}" Value="">
                             <Setter Property="IsVisible" Value="False" />
                         </DataTrigger>
                     </Label.Triggers>
                 </Label>
-                <Frame
-                    HasShadow="False"
-                    CornerRadius="15" 
-                    BorderColor="#0A6334"
-                    IsClippedToBounds="True">
+
+                <Frame HasShadow="False" CornerRadius="15" BorderColor="#0A6334" IsClippedToBounds="True">
                     <utils:CustomEntry Text = ""
                             Placeholder="Votre numéro de compte sans la clé RIB"
                             x:Name="entry_compte"
                             BackgroundColor="Transparent"
-                            VerticalOptions="CenterAndExpand"
-                            MaxLength="25"/>
-
+                            VerticalOptions="CenterAndExpand"/>
                 </Frame>
             </StackLayout>
+
             <StackLayout>
                 <Label Text="Choisissez un identifiant" TextColor="#0A6334">
                     <Label.Triggers>
-                        <DataTrigger TargetType="Label"
-                                     Binding="{Binding Source={x:Reference entry_identifiant}, Path=Text}" Value="">
+                        <DataTrigger TargetType="Label" Binding="{Binding Source={x:Reference entry_identifiant}, Path=Text}" Value="">
                             <Setter Property="IsVisible" Value="False" />
                         </DataTrigger>
                     </Label.Triggers>
                 </Label>
-                <Frame
-                    HasShadow="False"
-                    CornerRadius="15" 
-                    BorderColor="#0A6334"
-                    IsClippedToBounds="True">
+
+                <Frame HasShadow="False" CornerRadius="15" BorderColor="#0A6334" IsClippedToBounds="True">
                     <utils:CustomEntry Text = ""
                             Placeholder="Choisissez un identifiant"
                             x:Name="entry_identifiant"
                             BackgroundColor="Transparent"
                             VerticalOptions="CenterAndExpand"
                             MaxLength="25"/>
-
                 </Frame>
             </StackLayout>
+
             <StackLayout>
                 <Label Text="Définissez un mot de passe" TextColor="#0A6334">
                     <Label.Triggers>
-                        <DataTrigger TargetType="Label"
-                                     Binding="{Binding Source={x:Reference entry_password}, Path=Text}" Value="">
+                        <DataTrigger TargetType="Label" Binding="{Binding Source={x:Reference entry_password}, Path=Text}" Value="">
                             <Setter Property="IsVisible" Value="False" />
                         </DataTrigger>
                     </Label.Triggers>
                 </Label>
-                <Frame
-                    HasShadow="False"
-                    CornerRadius="15" 
-                    BorderColor="#0A6334"
-                    IsClippedToBounds="True">
-                    <utils:CustomEntry Text = "" IsPassword="True"
-                            Placeholder="Définissez un mot de passe"
-                            x:Name="entry_password"
-                            BackgroundColor="Transparent"
-                            VerticalOptions="CenterAndExpand"
-                            MaxLength="25"/>
+
+                <Frame HasShadow="False" CornerRadius="15" BorderColor="#0A6334" IsClippedToBounds="True">
+                    <utils:CustomEntry Text = ""
+                                       IsPassword="True"
+                                       Placeholder="Définissez un mot de passe"
+                                       x:Name="entry_password"
+                                       BackgroundColor="Transparent"
+                                       VerticalOptions="CenterAndExpand"
+                                       MaxLength="25"/>
 
                 </Frame>
             </StackLayout>
+
             <StackLayout>
                 <Label Text="Confirmez votre mot de passe" TextColor="#0A6334">
                     <Label.Triggers>
-                        <DataTrigger TargetType="Label"
-                     Binding="{Binding Source={x:Reference entry_password2},
-                                       Path=Text}"
-                     Value="">
+                        <DataTrigger TargetType="Label" Binding="{Binding Source={x:Reference entry_password2}, Path=Text}" Value="">
                             <Setter Property="IsVisible" Value="False" />
                         </DataTrigger>
                     </Label.Triggers>
                 </Label>
-                <Frame HasShadow="False" CornerRadius="15" 
-                   BorderColor="#0A6334" IsClippedToBounds="True">
-                    <utils:CustomEntry Text = ""
+                <Frame HasShadow="False" CornerRadius="15" BorderColor="#0A6334" IsClippedToBounds="True">
+                    <utils:CustomEntry
+                            Text = ""
                             Placeholder="Confirmez votre mot de passe" 
                             x:Name="entry_password2"
                             BackgroundColor="Transparent"
@@ -106,14 +95,12 @@
         </StackLayout>
 
         <StackLayout VerticalOptions="EndAndExpand" Spacing="20" Padding="0,0,0,20">
-            <Button BackgroundColor="#90E86C" TextColor="WhiteSmoke" 
+            <Button
+                BackgroundColor="#90E86C"
                 Text="S'inscrire"
                 HeightRequest="50" 
-                HorizontalOptions="FillAndExpand" Clicked="Button_Clicked"/>
-
+                HorizontalOptions="FillAndExpand"
+                Clicked="Button_Clicked"/>
         </StackLayout>
-
-
-
     </StackLayout>
 </ContentPage>

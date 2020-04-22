@@ -18,34 +18,36 @@ namespace Keaz.ViewModels
 
         void ListMenuOperations()
         {
-            MenuOperations_source.Add(new Models.MenuOperations()
+            MenuOperations_source.Add(new MenuOperations()
             {
                 icon = "operations",
                 text = "Transfert de compte à compte"
             });
 
-            MenuOperations_source.Add(new Models.MenuOperations()
+            MenuOperations_source.Add(new MenuOperations()
             {
                 icon = "virement",
                 text = "Faire un virement"
             });
 
-            MenuOperations_source.Add(new Models.MenuOperations()
+            MenuOperations_source.Add(new MenuOperations()
             {
                 icon = "add_user",
                 text = "Ajouter un bénéficiaire"
             });
 
-            MenuOperations_source.Add(new Models.MenuOperations()
+            MenuOperations_source.Add(new MenuOperations()
             {
                 icon = "factures",
                 text = "Paiement de factures"
             });
-            MenuOperations_source.Add(new Models.MenuOperations()
+            MenuOperations_source.Add(new MenuOperations()
             {
                 icon = "keaz_up",
                 text = "Acheter un jeton KEAZ Cash"
-            }); MenuOperations_source.Add(new Models.MenuOperations()
+            });
+
+            MenuOperations_source.Add(new MenuOperations()
             {
                 icon = "keaz_down",
                 text = "Rembourser un jeton KEAZ Cash"

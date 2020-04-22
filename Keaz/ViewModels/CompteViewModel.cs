@@ -7,7 +7,6 @@ namespace Keaz.ViewModels
 {
     public class CompteViewModel : BaseViewModel
     {
-        //private Command SaveCustomer { get; set; }
         public ObservableCollection<Compte> Comptes { get; private set; }
         public ObservableCollection<Operations> Operations { get; private set; }
         readonly IList<Compte> comptes_source;

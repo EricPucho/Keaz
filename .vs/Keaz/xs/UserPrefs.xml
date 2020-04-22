@@ -1,25 +1,20 @@
 ﻿<Properties StartupConfiguration="{76EB00AE-B9B3-4F74-BE16-C0E0CA92C660}|Default">
-  <MonoDevelop.Ide.ItemProperties.Keaz.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.205ee342067a4d278e41f4d9a66d58c0d1319ac2" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Keaz/Views/RecapVirementPage.xaml">
-    <Files>
-      <File FileName="Keaz.iOS/Info.plist" />
-      <File FileName="Keaz.iOS/iTunesArtwork" />
-      <File FileName="Keaz/Views/DetailsVirementPage.xaml" Line="26" Column="68" />
-      <File FileName="Keaz/Views/RecapVirementPage.xaml" Line="5" Column="42" />
-    </Files>
+  <MonoDevelop.Ide.ItemProperties.Keaz.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.44E5D68C-6942-4148-8D3E-0B3B61176A9C" />
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Keaz" expanded="True" selected="True" />
+          <Node name="Keaz" expanded="True">
+            <Node name="Keaz" expanded="True">
+              <Node name="AssemblyInfo.cs" selected="True" />
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <DisabledProjects>
-    <String>Keaz.Android/Keaz.Android.csproj</String>
-  </DisabledProjects>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

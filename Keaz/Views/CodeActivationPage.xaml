@@ -9,40 +9,58 @@
         <StackLayout>
             <StackLayout VerticalOptions="EndAndExpand">
                 <ScrollView VerticalOptions="EndAndExpand">
-                    <StackLayout >
+                    <StackLayout>
+
                         <Label Text="Un code de vérification de 4 chiffres a été envoyé par SMS au numéro lié à votre compte bancaire. Entrez le code reçu pour accéder à votre compte"
-                       Margin="30,30"
-                   TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                   VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="16">
-                        </Label>
+                               Margin="30,30"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalTextAlignment="Center"
+                               VerticalOptions="CenterAndExpand"
+                               HorizontalOptions="CenterAndExpand"
+                               FontSize="16"/>
 
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand"
-                         VerticalOptions="CenterAndExpand" Spacing="15">
-                            <Entry Style="{StaticResource EntryStyle}"/>
-                            <Entry Style="{StaticResource EntryStyle}"/>
-                            <Entry Style="{StaticResource EntryStyle}"/>
-                            <Entry Style="{StaticResource EntryStyle}"/>
 
+                        <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="CenterAndExpand"
+                                     VerticalOptions="CenterAndExpand"
+                                     Spacing="15">
+                            <Entry Style="{StaticResource EntryStyle}"/>
+                            <Entry Style="{StaticResource EntryStyle}"/>
+                            <Entry Style="{StaticResource EntryStyle}"/>
+                            <Entry Style="{StaticResource EntryStyle}"/>
                         </StackLayout>
 
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand"
-                         VerticalOptions="CenterAndExpand" Spacing="15" Padding="20,20,20,30">
+                        <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="CenterAndExpand"
+                                     VerticalOptions="CenterAndExpand"
+                                     Spacing="15"
+                                     Padding="20,20,20,30">
+
                             <Label  Text="Je n'ai pas reçu de code" 
-                                    TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
-                                    FontSize="13">
-                            </Label>
+                                    TextColor="White"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalTextAlignment="Center"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    FontSize="13"/>
 
                             <Label  Text="Renvoyez le code"
                                     TextColor="White"
-                                    VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
-                                    FontSize="15" FontAttributes="Bold" TextDecorations="Underline">
-                            </Label>
+                                    VerticalTextAlignment="Center"
+                                    HorizontalTextAlignment="Center"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    FontSize="15"
+                                    FontAttributes="Bold"
+                                    TextDecorations="Underline"/>
                         </StackLayout>
                     </StackLayout>
                 </ScrollView>
-                <Frame VerticalOptions="EndAndExpand" BackgroundColor="White" HeightRequest="300">
+
+                <Frame VerticalOptions="EndAndExpand"
+                       BackgroundColor="White"
+                       HeightRequest="300">
                     <Grid RowSpacing="1" ColumnSpacing="1">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*" />
@@ -69,7 +87,6 @@
                     </Grid>
                 </Frame>
             </StackLayout>
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

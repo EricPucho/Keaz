@@ -9,7 +9,9 @@
             <Image Source="credit_card"/>
 
             <Label Text="Services de la carte" FontSize="20" Padding="0,30,0,0"/>
+
             <BoxView HeightRequest="1" Color="LightGray"/>
+
             <StackLayout Spacing="15">
                 <StackLayout Orientation="Horizontal">
                     <Image Source="lock" HeightRequest="35"/>
@@ -24,7 +26,9 @@
             </StackLayout>
 
             <Label Text="Autres services" FontSize="20" Margin="0,20,10,0"/>
+
             <BoxView HeightRequest="1" Color="LightGray"/>
+
             <StackLayout Spacing="15">
                 <StackLayout Orientation="Horizontal">
                     <Image Source="edit" HeightRequest="35"/>

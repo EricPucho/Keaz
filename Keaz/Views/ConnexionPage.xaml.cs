@@ -25,5 +25,4 @@ namespace Keaz.Views
             App.Current.MainPage = navigationPage;
         }
     }
-
 }

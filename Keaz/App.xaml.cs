@@ -19,9 +19,6 @@ namespace Keaz
             navigationPage.BackgroundColor = Color.FromRgb(10, 99, 52);
             navigationPage.BarTextColor = Color.FromRgb(10, 99, 52);
 
-            //navigationPage.BarBackgroundColor = Color.FromRgb(10, 99, 52);
-            //navigationPage.BackgroundColor = Color.White;
-            //navigationPage.BarTextColor = Color.White;
             App.Current.MainPage = navigationPage;
         }
 

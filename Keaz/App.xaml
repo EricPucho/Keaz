@@ -7,7 +7,6 @@
              x:Class="Keaz.App">
     <Application.Resources>
         <ResourceDictionary>
-
             <Style TargetType="Label">
                 <Setter Property="FontFamily" Value="ProximaNova-Regular" />
             </Style>
@@ -21,6 +20,7 @@
                 <Setter Property="FontSize" Value="18" />
                 <Setter Property="CornerRadius" Value="10" />
                 <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="WhiteSmoke" />
             </Style>
         </ResourceDictionary>
         <Style x:Key="LabelStyle" TargetType="Button">

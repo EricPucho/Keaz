@@ -11,29 +11,15 @@ namespace Keaz.iOS.Renderers
 {
     public class CustomEntryRenderer : EntryRenderer
     {
-        #region Properties
-
-        private UIColor BorderColor = UIColor.White;
-
-        private int BorderWidth = 0;
-
-        private Thickness TextPadding = new Thickness(0);
-
-        #endregion
-
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             base.OnElementPropertyChanged(sender, e);
 
             var element = ((CustomEntry)sender);
 
-            BorderColor = element.BorderColor.ToUIColor();
-
-            BorderWidth = element.BorderWidth;
-
         }
 
-        protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Entry> e)
+        protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
         {
             base.OnElementChanged(e);
 

@@ -18,13 +18,10 @@ namespace Keaz.Views
 
         void _collectionview_SelectionChanged(System.Object sender, Xamarin.Forms.SelectionChangedEventArgs e)
         {
+            string result = (e.CurrentSelection.FirstOrDefault() as MenuOperations)?.text;
 
-            string current = (e.CurrentSelection.FirstOrDefault() as MenuOperations)?.text;
-
-            if (current == "Faire un virement")
+            if (result == "Faire un virement")
                 App.Current.MainPage.Navigation.PushAsync(new FaireVirementPage());
-
-
         }
     }
 }
